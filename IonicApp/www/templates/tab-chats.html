@@ -1,0 +1,13 @@
+<ion-view view-title="Students">
+  <ion-content>
+    <input type="search"  ng-model="search" placeholder="Search users....">
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="student in students|filter:search" type="item-text-wrap" href="#/tab/students/{{student.name}}">
+        <h2>{{student.name}}</h2>
+        <p>{{student.address}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

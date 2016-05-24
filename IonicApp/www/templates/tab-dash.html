@@ -1,0 +1,13 @@
+<ion-view view-title="Subjects">
+
+  <ion-content class="padding">
+    <input type="search"  ng-model="search" placeholder="Search Subjects....">
+    <div class="list card">
+
+      <a ng-repeat="subject in subjects|filter:{name:search }" href="#/subjects/{{subject.name}}" class="item item-icon-left">
+        {{subject.name}}
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>
